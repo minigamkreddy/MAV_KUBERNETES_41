@@ -1,0 +1,33 @@
+1.    Changed port numbers in vote-service, result-service
+2.    I was able to acces voting and result pages
+
+
+
+3.    After deleteing voting app
+    a.    Able to access result  page  
+    b.    Voting pod got recreated and was able to access vote and result page
+    
+4.    After delete worker
+    a.    Able to access result  page  
+    b.    worker pod got recreated and was able to access vote and result page
+
+
+
+5.    After delete db
+    a.    Able to access result page
+    b.    worker pod restarted
+
+[root@ip-172-31-45-237 example-voting-app]# kubectl get po
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-9tv8v        1/1     Running   0          21h
+redis-868d64d78-d7sft     1/1     Running   0          22h
+result-5d57b59f4b-fc6d6   1/1     Running   0          21h
+vote-94849dc97-j2gvt      1/1     Running   0          21h
+worker-dd46d7584-6hg8t    1/1     Running   1          21h
+[root@ip-172-31-45-237 example-voting-app]#
+
+
+
+
+   c.    Result page did not reflect the result which it earlier had. (data lost)
+    d.    When pod is deleted data is lost
