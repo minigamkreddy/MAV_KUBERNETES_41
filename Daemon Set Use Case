@@ -1,1 +1,3 @@
-
+A DaemonSet is a controller that ensures that the pod runs on all the nodes of the cluster. 
+If a node is added/removed from a cluster, DaemonSet automatically adds/deletes the pod. 
+Some typical use cases of a DaemonSet is to run cluster level applications.
